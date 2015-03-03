@@ -1,0 +1,7 @@
+<form {{action "login" on="submit"}}>
+	{{input value=username id='username' placeholder="Username"}}
+
+	{{#if loginFailed}}
+	  <div class="alert alert-danger">Invalid username or password.</div>
+	{{/if}}
+</form>
