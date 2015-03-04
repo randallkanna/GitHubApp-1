@@ -81,7 +81,9 @@ define('test1/router', ['exports', 'ember', 'test1/config/environment'], functio
 
   Router.map(function () {
     this.route("index", { path: "/" });
-    this.resource("user", { path: "/:username" });
+    this.resource("user", { path: "/:username" }, function () {
+      this.route("repo", { path: "/:username/:reponame" });
+    });
   });
 
   exports['default'] = Router;
