@@ -1,19 +1,18 @@
 <div class="row">
   <div class="col-md-1"> </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
     <h3>{{login}}</h3>
     <div class="panel panel-default">
       <div class="panel-heading">About</div>
-        <div class="panel-body">
-          <img src="avatar_url">
-        </div>
+
+
         <ul class="list-group">
-          <li class="list-group-item">Name: {{model.user.name}}</li>
-          <li class="list-group-item">Company: {{model.user.company}}</li>
-          <li class="list-group-item">BlogURL: {{model.user.blog}}</li>
-          <li class="list-group-item">Follower Count: {{model.user.followers}}</li>
-          <li class="list-group-item">Following Count: {{model.user.following}}</li>
-          <li class="list-group-item">Creation Date: {{model.user.created_at}}</li>
+          <li class="list-group-item"><strong>Name:</strong> {{model.user.name}}</li>
+          <li class="list-group-item"><strong>Company: </strong>{{model.user.company}}</li>
+          <li class="list-group-item"><strong>BlogURL: </strong>{{model.user.blog}}</li>
+          <li class="list-group-item"><strong>Follower Count: </strong>{{model.user.followers}}</li>
+          <li class="list-group-item"><strong>Following Count: </strong>{{model.user.following}}</li>
+          <li class="list-group-item"><strong>Creation Date: </strong>{{model.user.created_at}}</li>
         </ul>
       </div>
   </div>
