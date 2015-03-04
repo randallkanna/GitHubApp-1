@@ -13,7 +13,10 @@ module.exports = function(environment) {
       }
     },
     contentSecurityPolicy: {
-      'connect-src': "'self' https://api.github.com"
+      'connect-src': "'self' https://api.github.com",
+      'style-src': "'self' https://maxcdn.bootstrapcdn.com",
+      'script-src': "'self' https://maxcdn.bootstrapcdn.com",
+      'font-src': "'self' https://maxcdn.bootstrapcdn.com",
     },
 
     APP: {
