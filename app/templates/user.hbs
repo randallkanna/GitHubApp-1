@@ -1,1 +1,27 @@
-{{outlet}}
+<div class="row">
+  <div class="col-md-1"> </div>
+  <div class="col-md-2">
+    <h3>{{login}}</h3>
+    <div class="panel panel-default">
+      <div class="panel-heading">About</div>
+        <div class="panel-body">
+          <img src="avatar_url">
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">Name: {{model.user.name}}</li>
+          <li class="list-group-item">Company: {{model.user.company}}</li>
+          <li class="list-group-item">BlogURL: {{model.user.blog}}</li>
+          <li class="list-group-item">Follower Count: {{model.user.followers}}</li>
+          <li class="list-group-item">Following Count: {{model.user.following}}</li>
+          <li class="list-group-item">Creation Date: {{model.user.created_at}}</li>
+        </ul>
+      </div>
+  </div>
+
+  <div class="col-md-7"> 
+    <h3>Repositories</h3>
+    {{#each model.repos}}
+      <div class="well">{{name}}</div>
+    {{/each}}
+  </div>
+</div>
