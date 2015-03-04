@@ -1,0 +1,1 @@
+/Users/thomas_lee/Desktop/GitHubApp/tmp/jshinter-tmp_dest_dir-i3kcpvFf.tmp/app.jshint.js

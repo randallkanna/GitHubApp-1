@@ -1,0 +1,4 @@
+module('JSHint - routes');
+test('routes/user.js should pass jshint', function() { 
+  ok(false, 'routes/user.js should pass jshint.\nroutes/user.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/user.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\nroutes/user.js: line 8, col 7, Unreachable \'debugger\' after \'return\'.\nroutes/user.js: line 8, col 7, Forgotten \'debugger\' statement?\nroutes/user.js: line 8, col 15, Missing semicolon.\n\n5 errors'); 
+});

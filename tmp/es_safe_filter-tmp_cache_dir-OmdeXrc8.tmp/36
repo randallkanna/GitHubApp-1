@@ -1,0 +1,17 @@
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+	model: function(params) {
+    var user = Ember.$.getJSON('https://api.github.com/users/' + params.username).then(function(data) {});
+  },
+  renderTemplate: function() {
+    this.render('user', {   // the template to render
+      into: 'user',                // the route to render into
+      outlet: 'repos',              // the name of the outlet in the route's template
+      controller: 'user'        // the controller to use for the template
+    });
+  }
+});
+
+
+

@@ -1,0 +1,12 @@
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+	model: function(params) {
+    var user = Ember.$.getJSON('https://api.github.com/users/' + params.username).then(function(data) {
+    });
+
+    var repos = Ember.$.getJSON('https://api.github.com/users/' + params.username + "repos").then(function(data) {
+    	debugger
+    });
+  }
+});

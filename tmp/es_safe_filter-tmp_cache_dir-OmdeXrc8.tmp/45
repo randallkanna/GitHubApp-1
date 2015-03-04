@@ -1,0 +1,42 @@
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+	model: function(params) {
+    var promise1 = new Ember.RSVP.Promise(function(resolve, reject) {
+      Ember.$.ajax({
+        type: "GET",
+        url: 'https://api.github.com/users/' + params.username,
+        success: resolve,
+        error: reject
+      });
+    }).then(function(response) {
+      return reponse;
+    }, function() {});
+
+    var promise2 = new Ember.RSVP.Promise(function(resolve, reject) {
+      Ember.$.ajax({
+        type: "GET",
+        url: 'https://api.github.com/users/' + params.username + "/repos",
+        success: resolve,
+        error: reject
+      });
+    }).then(function(response) {
+      return reponse;
+    }, function() {});
+
+    var hash = Ember.RSVP.hash({
+      user: ,
+      repos: Ember.$.getJSON('https://api.github.com/users/' + params.username + "/repos")
+    });
+    // Ember.$.getJSON('https://api.github.com/users/' + params.username).then(function(data) {
+    //   hash["user"] = data;
+    //   Ember.$.getJSON('https://api.github.com/users/' + params.username + "/repos").then(function(repos) {
+    //     hash["repos"] = repos;
+    //   });
+    // });
+    debugger
+  }
+});
+
+
+

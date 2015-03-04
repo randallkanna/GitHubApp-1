@@ -1,0 +1,1 @@
+/Users/thomas_lee/Desktop/GitHubApp/tmp/custom_static_compiler-tmp_dest_dir-thY9UxTj.tmp/test1/tests/helpers/resolver.jshint.js
