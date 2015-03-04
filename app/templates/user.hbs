@@ -2,25 +2,41 @@
   <div class="col-md-1"> </div>
   <div class="col-md-3">
     <h3>{{login}}</h3>
-    <div class="panel panel-default">
-      <div class="panel-heading">About</div>
+      <h3>{{model.user.name}}</h3>
+      <h5>{{model.user.username}}</h5>
+      <p>
+        <img src="https://cdn4.iconfinder.com/data/icons/fugue/icon/sitemap-application.png">&nbsp; {{model.user.company}}<br>
+        <img src="https://cdn3.iconfinder.com/data/icons/faticons/32/location-01-16.png">&nbsp; {{model.user.blog}}<br>
+        <img src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/clock-16.png">&nbsp; {{model.user.created_at}}<br>
+        <hr width="200">
+        
+        <table>
+        <tr>
+          <td>
+        <span class="follow"><strong>&nbsp;&nbsp;&nbsp;&nbsp;{{model.user.followers}}<br></strong></span>
+        Followers <br>
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+        <span class="follow"><strong>&nbsp;&nbsp;&nbsp;&nbsp;{{model.user.following}}<br></strong></span>
+        Following <br>
+        </td>
+        </tr>
+        </table>
 
-
-        <ul class="list-group">
-          <li class="list-group-item"><strong>Name:</strong> {{model.user.name}}</li>
-          <li class="list-group-item"><strong>Company: </strong>{{model.user.company}}</li>
-          <li class="list-group-item"><strong>BlogURL: </strong>{{model.user.blog}}</li>
-          <li class="list-group-item"><strong>Follower Count: </strong>{{model.user.followers}}</li>
-          <li class="list-group-item"><strong>Following Count: </strong>{{model.user.following}}</li>
-          <li class="list-group-item"><strong>Creation Date: </strong>{{model.user.created_at}}</li>
-        </ul>
-      </div>
+      </p>
   </div>
 
-  <div class="col-md-7"> 
-    <h3>Repositories</h3>
+  <div class="col-md-7 repository-display"> 
+    <ul>
+    <li><img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699379-icon-31-book-bookmark-32.png"></li>
+    <li><h4>Repositories</h4></li>
+    </ul><br><br>
+
+
     {{#each model.repos}}
-      <div class="well">{{name}}</div>
+       <strong><span class="repo-name">{{name}}</span></strong>
+      <hr width="100%">
     {{/each}}
   </div>
 </div>
